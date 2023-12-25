@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        'konexy':['Konexy', 'sans-serif']
+        'konexy':['var(Konexy)']
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

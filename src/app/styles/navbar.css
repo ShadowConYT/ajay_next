@@ -23,10 +23,15 @@ nav {
 
 nav a{
     margin: 0 2rem;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
 .nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
     opacity: 0;
     visibility: hidden;
 }
@@ -44,10 +49,11 @@ nav a{
         height: 100%;
         width: 100%;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
-        background: rgb(246, 195, 23, 0.5);
+        background: rgba(245, 189, 6,0.9);
         transition: 1s;
         backdrop-filter: blur(5px);
         transform: translateY(-100vh);
@@ -55,6 +61,12 @@ nav a{
 
     .head .responsive_nav{
         transform: none;
+    }
+
+    .nav-close-btn{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
     }
 
 }

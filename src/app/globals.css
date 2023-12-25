@@ -1,16 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('/app/assets/fonts/Konexy.otf');
 
-@font-face {
-  font-family: 'Konexy';
-  src: url('/assets/fonts/Konexy.otf');
-}
-
-*{
-  font-family: 'Konexy';
-}
 
 *{
   box-sizing: border-box;

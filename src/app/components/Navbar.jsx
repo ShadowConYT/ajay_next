@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <div className='head'>
-        <div className='md:w-20'>
+        <div className='w-20 md:w-20'>
             <Image src={SampleLogo} alt='Logo'/>
         </div>
 
@@ -26,11 +26,11 @@ const Navbar = () => {
             <a href="#">Education</a>
             <a href="#">Works</a>
             <a href="#">Contact</a>
-            <button className='nav-btn nav-close-btn' onClick={showBar}>
+            <button className='nav-btn nav-close-btn text-white' onClick={showBar}>
                 <FaTimes />
             </button>
         </nav>
-        <button onClick={showBar} className="nav-btn">
+        <button onClick={showBar} className="text-white nav-btn">
             <FaBars />
         </button>
     </div>
