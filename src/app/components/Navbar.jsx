@@ -20,7 +20,7 @@ const Navbar = () => {
             <Image src={SampleLogo} alt='Logo'/>
         </div>
 
-        <nav className='font-konexy' ref={navRef}> 
+        <nav className='font-roz' ref={navRef}> 
             <a href="#">About</a>
             <a href="#">Skills</a>
             <a href="#">Education</a>

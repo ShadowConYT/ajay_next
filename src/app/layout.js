@@ -2,11 +2,12 @@ import { Inter } from 'next/font/google'
 import './globals.css';
 import localFont from 'next/font/local';
 
-const Konexy = localFont({
+
+const roz = localFont({
   src: [{
     path:'./assets/fonts/roz.otf'
   }],
-  variable: 'Konexy'
+  variable: 'roz'
 })
 
 const inter = Inter({ subsets: ['latin'] })
@@ -19,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={Konexy.className}>{children}</body>
+      <body className={`${roz.className}`}>{children}</body>
     </html>
   )
 }
