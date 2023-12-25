@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <div className='head'>
-        <div className='w-20 md:w-20'>
+        <div className='xs:block:md lg:opacity-0 w-20 md:w-20'>
             <Image src={SampleLogo} alt='Logo'/>
         </div>
 
