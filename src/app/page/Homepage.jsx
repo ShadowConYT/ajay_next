@@ -13,17 +13,27 @@ import '../styles/homepage.css'
 export default function Homepage(){
 
   return (
-    <div className='h-screen overflow-hidden inset-0'>
+    <div className='h-dvh lg:mx-10 overflow-hidden inset-0'>
       <div className='z-10'>
           <Navbar />
       </div>
-      <div className='h-96 md:h-full w-fit flex flex-col align-middle'>
-        <p className={`${Chromate.className} text-left text-3xl text-white`}>I'm</p>
-        <h1 className={`${Chromate.className} -z-20 text-5xl  md:text-[100px] lg:text-[175px] uppercase text-center text-white`}>Ajay Suresh</h1>
-      </div>
-    
-      <div>
-        <Image className='-z-10 absolute bottom-0 left-1/2 transform -translate-x-1/2 w-96 md:w-[500px]' src={SatoruGojoPNGImage} alt="Satoru Gojo" />
+      
+      <div className='lg:h-full lg:grid lg:grid-cols-3 lg:justify-evenly'>
+        <div className='lg:flex lg:items-center'>
+          <div className='lg:align-middle lg:items-center'>
+            <p className='text-white lg:pl-5 lg:text-3xl '>Hi 👋, I <span className='text-[--secondary-color]'>am</span></p>
+            <h1 className='text-white lg:text-8xl' >Ajay</h1>
+          </div>
+        </div>
+
+        <div className='relative'>
+          <Image className='w-[500px] absolute bottom-16' src={SatoruGojoPNGImage} alt='Satoru Gojo' />
+        </div>
+
+        <div>
+
+        </div>
+
       </div>
 
     </div>

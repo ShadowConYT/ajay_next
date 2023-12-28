@@ -8,6 +8,9 @@ export default function Home() {
       <section>
         <Homepage />
       </section>
+      <section className='h-dvh'>
+        hello
+      </section>
     </main>
   )
 }
