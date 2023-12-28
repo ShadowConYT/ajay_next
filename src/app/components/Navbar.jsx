@@ -21,11 +21,11 @@ const Navbar = () => {
         </div>
 
         <nav className='font-roz' ref={navRef}> 
-            <a href="#">About</a>
-            <a href="#">Skills</a>
-            <a href="#">Education</a>
-            <a href="#">Works</a>
-            <a href="#">Contact</a>
+            <a className='aTag' href="#">About</a>
+            <a className='aTag' href="#">Skills</a>
+            <a className='aTag' href="#">Education</a>
+            <a className='aTag' href="#">Works</a>
+            <a className='aTag' href="#">Contact</a>
             <button className='nav-btn nav-close-btn text-white' onClick={showBar}>
                 <FaTimes />
             </button>
