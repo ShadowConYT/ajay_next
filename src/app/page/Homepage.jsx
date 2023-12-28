@@ -3,6 +3,9 @@ import Navbar from '../components/Navbar';
 import TypeWriter from '../components/Typewriter';
 import Image from 'next/image';
 import SatoruGojoPNGImage from '../assets/SatoruGojoPNGImage.webp';
+import GitHub from '../assets/Card/GitHub.webp';
+import GitAlone from '../assets/Card/GitAlone.png';
+import Proj from '../assets/Card/Proj.jpg';
 
 import { Chromate } from '../utils/fonts';
 import { FaCodeBranch, FaMobile, FaUserGraduate, FaAward, FaPhoenixFramework} from 'react-icons/fa';
@@ -15,19 +18,11 @@ export default function Homepage(){
 
   const data = ['Designer', 'Developer', 'ML Enthusiast'];
 
-  const rightCard = () => {
-    return(
-      <a href="https://www.mythrillfiction.com/the-dark-rider" alt="Mythrill" target="_blank">
-        <div class="card">
-          <div class="wrapper">
-            <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg" class="cover-image" />
-          </div>
-          <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" class="title" />
-          <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp" class="character" />
-        </div>
-      </a>
-    )
-  }
+  const RightCardData = [
+    {image: GitHub, title: 'GitHub', descp: 'Visit My Github Profile', link:'', alone: GitAlone},
+    {image: Proj, title:'Projects', descp: '',link:'', alone:''},
+    {image: '', title:'', descp: '',link:'', alone:''}
+  ]
 
   return (
     <div className='h-dvh lg:mx-10 overflow-hidden inset-0'>
@@ -47,8 +42,20 @@ export default function Homepage(){
           <Image className='w-[500px] absolute bottom-0' src={SatoruGojoPNGImage} alt='Satoru Gojo' />
         </div>
 
-        <div>
-
+        <div className='lg:flex lg:flex-col lg:items-center'>
+            {RightCardData.map((card, index) => {
+              return(
+                <a key={index} href={card.link} alt="Mythrill" className='rounded-lg aTag' target="_blank">
+                  <div className="card">
+                    <div className="wrapper">
+                      <Image src={card.image} className="cover-image" />
+                    </div>
+                    <p className="title text-white">{card.title}</p>
+                    <Image src={card.alone} className="character" />
+                  </div>
+                </a>
+              )
+            })}
         </div>
 
       </div>
