@@ -3,6 +3,8 @@
     --secondary-color: #f6c317;
     --tertiary-color: #e1e1e1;
     --quaternary-color: #606060;
+    --card-height: 300px;
+    --card-width: calc(var(--card-height) / 1.5);
 }
 
 body{
