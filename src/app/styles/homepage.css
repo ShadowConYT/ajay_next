@@ -13,99 +13,56 @@
 	}
 }
 
-:root {
-	--card-width: 350px;
-	--card-height: calc(var(--card-width) / 1.5);
-}
 .card {
-	width: 350px;
-	height: 250px;
+	width: 400px;
+	height: 180px;
+	transition: all 0.2s;
 	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
-	padding: 0 0px;
-	perspective: 8000px;
-	margin: 0 0;
-}
-
-.cover-image {
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
-
-.wrapper {
-transition: all 0.5s;
-position: absolute;
-width: 100%;
-z-index: -1;
-}
-
-.card:hover .wrapper {
-	transform: perspective(1000px) translateY(0%) rotateX(25deg) translateZ(0);
-	box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
--webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
--moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-}
-
-.wrapper::before,
-.wrapper::after {
-content: "";
-opacity: 0;
-width: 100%;
-height: 100%;
-transition: all 0.5s;
-position: absolute;
-left: 0;
-}
-.wrapper::before {
-top: 0;
-height: 100%;
-background-image: linear-gradient(
-	to top,
-	transparent 46%,
-	rgba(12, 13, 19, 0.5) 68%,
-	rgba(12, 13, 19) 97%
-);
-}
-.wrapper::after {
-bottom: 0;
-opacity: 1;
-background-image: linear-gradient(
-	to bottom,
-	transparent 46%,
-	rgba(12, 13, 19, 0.5) 68%,
-	rgba(12, 13, 19) 97%
-);
-}
-
-.card:hover .wrapper::before,
-.wrapper::after {
-opacity: 1;
-}
-
-.card:hover .wrapper::after {
-	height: -10px;
-}
-.title {
-	text-align: center;
-	width: 100%;
-	transition: transform 0.5s;
-}
-.card:hover .title {
-	transform: translate3d(0%, -50px, 100px);
-}
-
-.character {
-width: 50%;
-opacity: 0;
-transition: ease-in-out 0.5s;
-position: absolute;
-z-index: -1;
-}
-
-.card:hover .character {
-opacity: 1;
-transform: translate3d(0%, -30%, 100px);
-}
+	cursor: pointer;
+  }
+  
+  .card-inner {
+	width: inherit;
+	height: inherit;
+	background: rgba(255, 255, 255, 0.05);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+	backdrop-filter: blur(10px);
+	border-radius: 8px;
+  }
+  
+  .card:hover {
+	transform: scale(1.04) rotate(1deg);
+  }
+  
+  .circle {
+	width: 100px;
+	height: 100px;
+	background: repeating-linear-gradient(48deg, #3023ae 0%, #ff0099 100%);
+	border-radius: 35% 30% 75% 30% / 49% 30% 70% 51%;
+	position: absolute;
+	animation: move-up6 2s ease-in infinite alternate-reverse;
+  }
+  
+  .circle:nth-child(1) {
+	top: -25px;
+	left: -25px;
+  }
+  
+  .circle:nth-child(2) {
+	bottom: -25px;
+	right: -25px;
+	animation-name: move-down1;
+  }
+  
+  @keyframes move-up6 {
+	to {
+	  transform: translateY(-10px);
+	}
+  }
+  
+  @keyframes move-down1 {
+	to {
+	  transform: translateY(10px);
+	}
+  }
+  

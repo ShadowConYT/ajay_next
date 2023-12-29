@@ -3,13 +3,13 @@ import Navbar from '../components/Navbar';
 import TypeWriter from '../components/Typewriter';
 import Image from 'next/image';
 import SatoruGojoPNGImage from '../assets/SatoruGojoPNGImage.webp';
-import GitHub from '../assets/Card/GitHub.webp';
+import GitHub from '../assets/Card/GitHub.png';
 import GitAlone from '../assets/Card/GitAlone.png';
 import Proj from '../assets/Card/Proj.jpg';
+import Social from '../assets/Card/Social.jpg';
 
-import { Chromate } from '../utils/fonts';
-import { FaCodeBranch, FaMobile, FaUserGraduate, FaAward, FaPhoenixFramework} from 'react-icons/fa';
-import { FaGears } from 'react-icons/fa6';
+import { Card, CardBody, CardHeader, CardFooter } from '@nextui-org/react';
+import { Button } from '@nextui-org/react';
 
 import '../styles/homepage.css'
 
@@ -21,7 +21,7 @@ export default function Homepage(){
   const RightCardData = [
     {image: GitHub, title: 'GitHub', descp: 'Visit My Github Profile', link:'', alone: GitAlone},
     {image: Proj, title:'Projects', descp: '',link:'', alone:''},
-    {image: '', title:'', descp: '',link:'', alone:''}
+    {image: Social, title:'', descp: '',link:'', alone:''}
   ]
 
   return (
@@ -42,18 +42,14 @@ export default function Homepage(){
           <Image className='w-[500px] absolute bottom-0' src={SatoruGojoPNGImage} alt='Satoru Gojo' />
         </div>
 
-        <div className='lg:flex lg:flex-col lg:items-center'>
+        <div className='lg:flex lg:flex-col lg:items-center lg:gap-y-10 lg:justify-end lg:mb-10'>
             {RightCardData.map((card, index) => {
               return(
-                <a key={index} href={card.link} alt="Mythrill" className='rounded-lg aTag' target="_blank">
-                  <div className="card">
-                    <div className="wrapper">
-                      <Image src={card.image} className="cover-image" />
-                    </div>
-                    <p className="title text-white">{card.title}</p>
-                    <Image src={card.alone} className="character" />
-                  </div>
-                </a>
+                  <div class="card" key={index}>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="card-inner"></div>
+                  </div>         
               )
             })}
         </div>
