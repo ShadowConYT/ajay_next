@@ -64,7 +64,7 @@ class TypeWriter extends React.PureComponent {
   }
 
   render() {
-    return <span className="typewriter">{this.state.text}</span>;
+    return <span className='typewriter text-[--secondary-color] w-[500px]'>{this.state.text}</span>;
   }
 }
 

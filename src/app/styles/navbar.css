@@ -6,10 +6,6 @@
     
 }
 
-body{
-    background-color: var(--primary-color);
-}
-
 .head{
     padding: 0.5rem 2rem !important;
     display: flex;
