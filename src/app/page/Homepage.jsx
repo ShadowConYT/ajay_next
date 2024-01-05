@@ -33,11 +33,11 @@ export default function Homepage(){
       <div className='lg:absolute bottom-0 lg:w-[700px] lg:z-10'>
         <Image src={AssetImg} />
       </div>
-      <div className='mx-10 lg:h-screen w-full lg:flex lg:items-center lg:justify-center'>
-            <div className='w-[450px] translate-x-1/2'>
+      <div className='mx-10 lg:h-screen w-full lg:flex lg:justify-center'>
+            <div className=''>
               <p className='text-white justify-center lg:pl-[1.5vw] lg:text-4xl '>Hi 👋, I <span className='text-[--secondary-color]'>am</span></p>
-              <h1 className={`text-white lg:text-9xl ${myFont.className} uppercase`} >Ajay</h1>
-              <p className='text-white lg:py-2 lg:text-5xl'>I'm a <TypeWriter data= {data} /></p>
+              <h1 className={`text-white lg:bottom-0 m-0 p-0 lg:text-[400px] ${myFont.className} uppercase`} >Ajay</h1>
+              {/*<p className='text-white lg:py-2 lg:text-5xl'>I'm a <TypeWriter data= {data} /></p>*/}
             </div>
       </div>
 

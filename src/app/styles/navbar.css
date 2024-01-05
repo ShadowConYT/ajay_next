@@ -36,7 +36,7 @@ nav a{
 }
 
 /* Write a Code for Active aTag and Change it's color to secondary */
-.aTag:active {
+.active, .aTag:hover{
     color: var(--secondary-color);
 }
 
