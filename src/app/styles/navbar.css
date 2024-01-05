@@ -13,7 +13,7 @@
 }
 
 nav {
-    background-color: var(--secondary-color);
+    /*background-color: var(--secondary-color);*/
     padding: 0.5rem 0.0rem;
     border-radius: 25px;
 }
@@ -24,15 +24,22 @@ nav a{
     align-items: center;
     vertical-align: middle;
     margin: 0 2rem;
-    color: var(--primary-color);
+    color: var(--tertiary-color);
+    letter-spacing: 0px;
     text-decoration: none;
     overflow: hidden;
     transition: 0.5s ease-in-out;
 }
 
 .aTag:hover {
-    transform: scale(1.1); /* Add this line */
+    transform: scale(1.05); /* Add this line */
 }
+
+/* Write a Code for Active aTag and Change it's color to secondary */
+.aTag:active {
+    color: var(--secondary-color);
+}
+
 .nav-btn {
     padding: 5px;
     cursor: pointer;
