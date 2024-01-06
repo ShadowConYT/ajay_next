@@ -9,12 +9,12 @@
 .head{
     padding: 0.5rem 2rem !important;
     display: flex;
-    justify-content:flex-end;
+    justify-content:space-between;
     align-items: center;
 }
 
 nav {
-    background-color: var(--secondary-color);
+    /*background-color: var(--secondary-color);*/
     padding: 0.5rem 0.0rem;
     border-radius: 25px;
 }
@@ -25,7 +25,7 @@ nav a{
     align-items: center;
     vertical-align: middle;
     margin: 0 2rem;
-    color: var(--primary-color);
+    color: var(--tertiary-color);
     letter-spacing: 0px;
     text-decoration: none;
     overflow: hidden;

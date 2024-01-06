@@ -18,27 +18,24 @@ export default function Homepage(){
 
   const data = ['Designer', 'Developer', 'ML Enthusiast'];
 
-  const RightCardData = [
-    {image: GitHub, title: 'GitHub', descp: 'Visit My Github Profile', link:'', alone: GitAlone},
-    {image: Proj, title:'Projects', descp: '',link:'', alone:''},
-    {image: Social, title:'', descp: '',link:'', alone:''}
-  ]
-
   return (
-    <div className='h-screen bg-[#2D3250] overflow-hidden inset-0 flex flex-col items-center'>
-      <div className='z-10'>
+    <>
+    <div className='h-screen relative bg-[#2D3250] overflow-hidden inset-0 flex flex-col items-center'>
+      <div className='z-20'>
           <Navbar />
       </div>
-      <div className='mx-10 -gap-y-20 md:max-w-7xl lg:flex lg:flex-col lg:h-full lg:items-center lg:justify-center'>
-        <p className='text-white flex lg:pl-[1.5vw] lg:text-4xl lg:bottom-0 m-0 leading-none'>Hi 
+      <div className='z-10 mx-10 -gap-y-20 md:min-w-7xl md:flex md:flex-col md:h-full md:items-center md:justify-center'>
+        <p className='text-white md:text-5xl flex lg:pl-[1.5vw] lg:text-4xl lg:bottom-0 m-0 leading-none'>Hi 
           <span>
           <picture>
             <source srcSet="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.webp" type="image/webp" />
             <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.gif" alt="👋" width="32" height="32" />
           </picture>
           </span>, <span className='text-[--secondary-color] pl-2'>I am</span></p>
-        <span className={`text-white lg:bottom-0 m-0 leading-none lg:text-[400px] ${myFont.className} `} >Ajay</span>
+          <span className={`text-white md:text-[250px] lg:bottom-0 mb-5 leading-none lg:text-[300px] ${myFont.className} `} >Ajay</span>
       </div>
     </div>
+    <Image src={AssetImg} className='absolute -bottom-40 md:blur-sm lg:blur-0 w-auto right-0 md:bottom-0 scale-x-[-1] object-scale-down max-h-full z-0' />
+    </>
   )
 }

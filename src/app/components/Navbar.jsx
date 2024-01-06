@@ -5,6 +5,14 @@ import { FaTimes, FaBars } from 'react-icons/fa';
 import { useRef } from 'react';
 import '../styles/navbar.css';
 
+import localFont from 'next/font/local';
+
+const AJ = localFont(
+    {
+        src: '../assets/fonts/Attena.otf'
+    }
+);
+
 const Navbar = () => {
 
 
@@ -50,9 +58,9 @@ const Navbar = () => {
 
 
   return (
-    <div className='head md:min-w-9xl' >
+    <div className='head md:w-[75vw] md:mt-10' >
         <div className='xs:block:md lg:opacity-100 md:w-20'>
-            <span>Ajay</span>
+            <span className={`${AJ.className} text-xl text-yellow-200`} >AJ</span>
         </div>
         <nav id='nav' className='font-roz' ref={navRef}> 
             <a className='aTag' href="#">About</a>
