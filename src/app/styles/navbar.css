@@ -1,5 +1,5 @@
 :root{
-    --primary-color: #202123;
+    --primary-color: #4a0228;
     --secondary-color: #f6c317;
     --tertiary-color: #e1e1e1;
     --quaternary-color: #606060;
@@ -9,11 +9,12 @@
 .head{
     padding: 0.5rem 2rem !important;
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-end;
+    align-items: center;
 }
 
 nav {
-    /*background-color: var(--secondary-color);*/
+    background-color: var(--secondary-color);
     padding: 0.5rem 0.0rem;
     border-radius: 25px;
 }
@@ -24,7 +25,7 @@ nav a{
     align-items: center;
     vertical-align: middle;
     margin: 0 2rem;
-    color: var(--tertiary-color);
+    color: var(--primary-color);
     letter-spacing: 0px;
     text-decoration: none;
     overflow: hidden;
@@ -53,6 +54,7 @@ nav a{
     .head .nav-btn{
         visibility: visible;
         opacity: 1;
+        padding-left: 75vw;
     }
 
     .head nav{
