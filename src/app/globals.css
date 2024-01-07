@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  cursor: none;
+}
 
 *{
   box-sizing: border-box;
@@ -809,4 +812,31 @@
   border-radius: 50%;
   box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.05), 0 0 0 15px rgba(255, 255, 255, 0.05), 0 0 0 25px rgba(255, 255, 255, 0.05), 0 0 0 35px rgba(255, 255, 255, 0.05);
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.cursor_dot{
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  transition: ease-in-out;
+}
+
+.cursor_outline{
+  transition: ease-in-out;
+
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fec927;
+}
+
+.cursor_dot,
+.cursor_outline{
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index:100;
+  pointer-events: none;
+  transition: all;
 }
