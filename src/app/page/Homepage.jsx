@@ -24,7 +24,7 @@ export default function Homepage(){
       <div className='z-20'>
           <Navbar />
       </div>
-      <div className='z-10 mx-10 relative -gap-y-20 md:max-w-6xl md:grid md:grid-cols-2 md:align-middle md:h-full '>
+      <div className='z-10 mx-10 relative -gap-y-20 max-w-4xl md:max-w-[75vw] md:grid md:grid-cols-2 md:align-middle md:h-full '>
         <div className='md:flex md:flex-col md:justify-center'>
           <p className='text-white md:text-5xl flex lg:bottom-0 m-0 leading-none'>Hi 
             <span>
@@ -41,9 +41,8 @@ export default function Homepage(){
         </div>
 
         <div>
-          <Image src={AssetImg} className='absolute -bottom-40 md:blur-sm lg:blur-0 w-auto right-0 md:bottom-0 scale-x-[-1] object-scale-down max-h-full z-0' />
+          <Image src={AssetImg} className='absolute -bottom-40 md:w-96:lg lg:blur-0 w-auto right-0 md:bottom-0 scale-x-[-1] object-scale-down max-h-full z-0' />
         </div>
-        
       </div>
     </div>
     </>
