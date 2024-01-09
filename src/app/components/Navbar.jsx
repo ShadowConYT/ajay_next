@@ -58,8 +58,8 @@ const Navbar = () => {
 
 
   return (
-    <div className='head md:w-[75vw] md:mt-10' >
-        <div className='xs:block:md lg:opacity-100 md:w-20'>
+    <div className='head w-[75vw] mt-10' >
+        <div className='lg:opacity-100 md:w-20'>
             <span className={`${AJ.className} text-xl text-yellow-200`} >AJ</span>
         </div>
         <nav id='nav' className='font-roz' ref={navRef}> 

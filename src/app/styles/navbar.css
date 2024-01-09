@@ -54,7 +54,9 @@ nav a{
     .head .nav-btn{
         visibility: visible;
         opacity: 1;
-        padding-left: 75vw;
+    }
+    nav{
+        justify-content: space-between;
     }
 
     .head nav{
