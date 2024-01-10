@@ -2,10 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar';
 import Image from 'next/image';
 import AssetImg from '../assets/AssetImg.png';
-import GitHub from '../assets/Card/GitHub.png';
-import GitAlone from '../assets/Card/GitAlone.png';
-import Proj from '../assets/Card/Proj.png';
-import Social from '../assets/Card/Social.jpg';
+import BG from '../assets/BG.png';
 
 import localFont from 'next/font/local';
 
@@ -20,7 +17,7 @@ export default function Homepage(){
 
   return (
     <>
-    <div className='h-screen relative bg-[#2D3250] overflow-hidden inset-0 flex flex-col items-center'>
+    <div className='h-screen  relative bg-[#2D3250] overflow-hidden inset-0 flex flex-col items-center'>
       <div className='z-20'>
           <Navbar />
       </div>
@@ -40,8 +37,11 @@ export default function Homepage(){
             </p>
         </div>
 
-        <div>
-          <Image src={AssetImg} className='absolute -bottom-40 md:w-96:lg lg:blur-0 w-auto right-0 md:bottom-0 scale-x-[-1] object-scale-down max-h-full z-0' />
+        <div className='relative h-full'>
+          <div className='circle h-full'>
+            <Image src={BG} className='bg' />
+            <Image src={AssetImg} className='absolute lg:blur-0 right-0 lg:bottom-0 scale-x-[-1] object-scale-down lg:max-h-full z-0' />
+          </div>
         </div>
       </div>
     </div>
