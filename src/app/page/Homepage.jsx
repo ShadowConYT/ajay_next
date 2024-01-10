@@ -36,7 +36,6 @@ export default function Homepage(){
             Tired of bouncing between siloed teams or struggling to communicate your vision? I'm here to bridge the gap. As a passionate Developer and Designer, I leverage the power of both worlds to create stunning UIs informed by data-driven insights.
             </p>
         </div>
-
         <div className='relative h-full'>
           <div className='circle h-full'>
             <Image src={BG} className='bg' />
