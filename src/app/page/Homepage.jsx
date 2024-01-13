@@ -40,7 +40,7 @@ export default function Homepage(){
             
 
               <motion.p className='text-justify md:text-left md:w-auto text-gray-200 tracking-wider'>
-                Tired of bouncing between siloed teams or struggling to communicate your vision? I'm here to bridge the gap. As a passionate Developer and Designer, I leverage the power of both worlds to create stunning UIs informed by data-driven insights.
+                Tired of bouncing between siloed teams or struggling to communicate your vision? I&apos;m here to bridge the gap. As a passionate Developer and Designer, I leverage the power of both worlds to create stunning UIs informed by data-driven insights.
               </motion.p>
           </div>
         </div>
