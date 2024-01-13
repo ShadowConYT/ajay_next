@@ -42,7 +42,7 @@ nav a{
 }
 
 .nav-btn {
-    padding: 5px;
+    padding: 0px;
     cursor: pointer;
     border: none;
     outline: none;
@@ -54,7 +54,7 @@ nav a{
     .head .nav-btn{
         visibility: visible;
         opacity: 1;
-        padding-left: 75vw;
+        margin-left: 75vw;
     }
 
     .head nav{

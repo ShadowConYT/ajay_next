@@ -12,6 +12,9 @@
 		transform: translatey(0px);
 	}
 }
+*{
+	transition: all;
+}
 
 .card {
 	width: 400px;
@@ -42,9 +45,8 @@
 	.circle{
 		position: relative;
 		width:  300px;
-		aspect-ratio: 1 / 1.2;
+		aspect-ratio: 1 / 2;
 		display: flex;
-		border-radius: 50%;
 		align-items: flex-end;
 		border-radius: 0 0 100vw 100vw;
 		overflow: hidden;
