@@ -7,7 +7,7 @@
 }
 
 .head{
-    padding: 0.5rem 2rem !important;
+    padding: 0.5rem 0rem !important;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -42,7 +42,7 @@ nav a{
 }
 
 .nav-btn {
-    padding: 5px;
+    padding: 0px;
     cursor: pointer;
     border: none;
     outline: none;
@@ -54,9 +54,7 @@ nav a{
     .head .nav-btn{
         visibility: visible;
         opacity: 1;
-    }
-    nav{
-        justify-content: space-between;
+        padding-left: 75vw;
     }
 
     .head nav{
