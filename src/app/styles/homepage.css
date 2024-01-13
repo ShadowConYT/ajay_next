@@ -41,7 +41,7 @@
  @media only screen and (max-width: 1024px){
 	.circle{
 		position: relative;
-		width: 200px;
+		width:  300px;
 		aspect-ratio: 1 / 1.2;
 		display: flex;
 		border-radius: 50%;
@@ -63,4 +63,21 @@
 		transform: scale(1.2);
 	 }
 
+	 .whole{
+		animation: animate infinite 5s ease-in-out;
+	 }
+
  }
+
+
+ @keyframes animate {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}

@@ -21,7 +21,7 @@ export default function Homepage(){
       <div className='z-20'>
           <Navbar />
       </div>
-      <div className='z-10 mx-10 md:mx-0 relative -gap-y-20 max-w-4xl md:min-w-[75vw] md:grid md:grid-cols-2 md:align-middle md:h-full '>
+      <div className='z-10 mx-10 md:mx-0 relative w-[75vw] md:grid md:grid-cols-2 md:justify-center md:align-middle md:h-full '>
         <div className='md:flex md:flex-col md:justify-center'>
           <AnimatePresence>
           <motion.p
@@ -41,14 +41,14 @@ export default function Homepage(){
             Tired of bouncing between siloed teams or struggling to communicate your vision? I'm here to bridge the gap. As a passionate Developer and Designer, I leverage the power of both worlds to create stunning UIs informed by data-driven insights.
             </motion.p>
         </div>
-        <div className='relative h-full'>
+        <div className='relative whole h-full'>
           <motion.div
             initial = {{opacity:0}}
             animate = {{opacity:1}}
             exit={{ x: "-100vh", opacity: 0 }}
-          className='circle h-full'>
+          className='circle h-screen lg:h-full md:transform md:translate-x-1/4 md:-translate-y-1/4 lg:transform-none lg:translate-x-0 lg:translate-y-0'>
             <Image src={BG} className='bg lg:hidden' />
-            <Image src={AssetImg} className='absolute lg:float-right lg:blur-0 right-0 lg:bottom-0 scale-x-[-1] object-scale-down lg:max-h-full z-0' />
+            <Image src={AssetImg} className='absolute m-0 p-0 lg:blur-0 lg:bottom-0 scale-x-[-1] md:w-60 lg:w-full translate-x-[4vw] object-scale-down lg:max-h-full z-0' />
           </motion.div>
         </div>
       </div>
