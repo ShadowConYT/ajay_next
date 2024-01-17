@@ -1,13 +1,12 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
 import Image from 'next/image';
-import AssetImg from '../assets/AssetImg.png';
+import AssetImg from '../assets/AssetImg.webp';
 import BG from '../assets/BG.jpg';
 
 import localFont from 'next/font/local';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/homepage.css';
-import Link from 'next/link';
 
 const myFont = localFont({
   src:'../assets/fonts/ClassyVogue.otf'
