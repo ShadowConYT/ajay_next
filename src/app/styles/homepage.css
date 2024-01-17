@@ -45,7 +45,7 @@
 	.circle{
 		position: relative;
 		width:  300px;
-		aspect-ratio: 1 / 2;
+		aspect-ratio: 1;
 		display: flex;
 		align-items: flex-end;
 		border-radius: 0 0 100vw 100vw;
@@ -69,6 +69,14 @@
 		animation: animate infinite 5s ease-in-out;
 	 }
 
+ }
+
+ @media only screen and (max-width: 767.5px){
+	.circle{
+		max-width: 35vw;
+		min-width: 250px;
+		aspect-ratio: 1/ 1.2;
+	}
  }
 
 

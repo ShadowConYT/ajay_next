@@ -1,3 +1,4 @@
+'use cors'
 import React from 'react'
 import Navbar from '../components/Navbar';
 import Image from 'next/image';
@@ -61,9 +62,9 @@ export default function Homepage(){
             initial = {{opacity:0}}
             animate = {{opacity:1}}
             exit={{ x: "-100vh", opacity: 0 }}
-          className='circle md:h-screen lg:h-full transform md:translate-x-1/4 -translate-y-1/4 lg:transform-none lg:translate-x-0 lg:translate-y-0'>
+          className='circle md:h-screen lg:h-full transform md:translate-x-1/4 md:-translate-y-1/4 lg:transform-none lg:translate-x-0 lg:translate-y-0'>
             <Image src={BG} className='bg lg:hidden' />
-            <Image src={AssetImg} className='absolute m-0 p-0 lg:blur-0 lg:bottom-0 scale-x-[-1] w-56  md:w-60 lg:w-full translate-x-[20%] md:translate-x-[15%] object-scale-down lg:max-h-full z-0' />
+            <Image src={AssetImg} className='absolute m-0 p-0 lg:blur-0 lg:bottom-0 scale-x-[-1] min-w-[170px] max-w-[23vw] md:max-w-none md:min-w-none  md:w-60 lg:w-full translate-x-[20%] md:translate-x-[15%] object-scale-down lg:max-h-full z-0' />
           </div>
         </div>
       </div>
