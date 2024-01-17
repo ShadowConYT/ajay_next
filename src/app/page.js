@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Homepage from './page/Homepage';
 import { useEffect } from 'react';
+import Router from 'next/router';
 
 
 export default function Home() {

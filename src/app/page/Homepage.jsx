@@ -6,14 +6,18 @@ import BG from '../assets/BG.jpg';
 
 import localFont from 'next/font/local';
 import { motion, AnimatePresence } from 'framer-motion';
-import '../styles/homepage.css'
+import '../styles/homepage.css';
+import Link from 'next/link';
 
 const myFont = localFont({
   src:'../assets/fonts/ClassyVogue.otf'
 })
 export default function Homepage(){
 
-  const data = ['Designer', 'Developer', 'ML Enthusiast'];
+  const ResumeLink = () => {
+    const PDFpath = "../assets/Resume.pdf"
+    window.open("/Resume.pdf", "_blank");
+  }
 
   return (
     <>
@@ -42,6 +46,15 @@ export default function Homepage(){
               <motion.p className='text-justify md:text-left md:w-auto text-gray-200 tracking-wider'>
                 Tired of bouncing between siloed teams or struggling to communicate your vision? I'm here to bridge the gap. As a passionate Developer and Designer, I leverage the power of both worlds to create stunning UIs informed by data-driven insights.
               </motion.p>
+
+              <div className='flex justify-center md:block'>
+                <button className="button text-center mt-2 md:mt-5" onClick={ResumeLink}>
+                  Resume
+                </button>
+              </div>
+              
+              
+
           </div>
         </div>
         <div className='relative whole md:h-full flex justify-center md:block'>
