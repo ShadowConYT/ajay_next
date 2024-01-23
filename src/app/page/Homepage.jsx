@@ -17,7 +17,7 @@ export default function Homepage(){
 
   return (
     <>
-    <div className='h-[100vh]  relative bg-[#2D3250] overflow-hidden inset-0 flex flex-col md:justify-center lg:justify-normal items-center'>
+    <div className='h-[100vh]  relative bg-[#1c2430] overflow-hidden inset-0 flex flex-col md:justify-center lg:justify-normal items-center'>
       <div className='z-20 mt-10 lg:mt-0'>
           <Navbar />
       </div>
