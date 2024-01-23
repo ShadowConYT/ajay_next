@@ -1,19 +1,23 @@
+'use cors'
 import React from 'react'
 import Navbar from '../components/Navbar';
 import Image from 'next/image';
-import AssetImg from '../assets/AssetImg.png';
+import AssetImg from '../assets/AssetImg.webp';
 import BG from '../assets/BG.jpg';
 
 import localFont from 'next/font/local';
 import { motion, AnimatePresence } from 'framer-motion';
-import '../styles/homepage.css'
+import '../styles/homepage.css';
 
 const myFont = localFont({
   src:'../assets/fonts/ClassyVogue.otf'
 })
 export default function Homepage(){
 
-  const data = ['Designer', 'Developer', 'ML Enthusiast'];
+  const ResumeLink = () => {
+    const PDFpath = "../assets/Resume.pdf"
+    window.open("/Resume.pdf", "_blank");
+  }
 
   return (
     <>
@@ -42,6 +46,15 @@ export default function Homepage(){
               <motion.p className='text-justify md:text-left md:w-auto text-gray-200 tracking-wider'>
                 Tired of bouncing between siloed teams or struggling to communicate your vision? I&apos;m here to bridge the gap. As a passionate Developer and Designer, I leverage the power of both worlds to create stunning UIs informed by data-driven insights.
               </motion.p>
+
+              <div className='flex justify-center md:block'>
+                <button className="button text-center mt-2 md:mt-5" onClick={ResumeLink}>
+                  Resume
+                </button>
+              </div>
+              
+              
+
           </div>
         </div>
         <div className='relative whole md:h-full flex justify-center md:block'>
@@ -49,9 +62,9 @@ export default function Homepage(){
             initial = {{opacity:0}}
             animate = {{opacity:1}}
             exit={{ x: "-100vh", opacity: 0 }}
-          className='circle md:h-screen lg:h-full transform md:translate-x-1/4 -translate-y-1/4 lg:transform-none lg:translate-x-0 lg:translate-y-0'>
+          className='circle md:h-screen lg:h-full transform md:translate-x-1/4 md:-translate-y-1/4 lg:transform-none lg:translate-x-0 lg:translate-y-0'>
             <Image src={BG} className='bg lg:hidden' />
-            <Image src={AssetImg} className='absolute m-0 p-0 lg:blur-0 lg:bottom-0 scale-x-[-1] w-56  md:w-60 lg:w-full translate-x-[20%] md:translate-x-[15%] object-scale-down lg:max-h-full z-0' />
+            <Image src={AssetImg} className='absolute m-0 p-0 lg:blur-0 lg:bottom-0 scale-x-[-1] min-w-[170px] max-w-[23vw] md:max-w-none md:min-w-none  md:w-60 lg:w-full translate-x-[20%] md:translate-x-[15%] object-scale-down lg:max-h-full z-0' />
           </div>
         </div>
       </div>
