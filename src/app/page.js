@@ -2,6 +2,7 @@
 'use cors'
 import Homepage from './page/Homepage';
 import { useEffect, useState } from 'react';
+import Loader from './components/Loader';
 
 const URL = process.env.dbKey;
 console.log(URL);
@@ -49,7 +50,7 @@ export default function Home() {
     <main className="min-h-screen flex-col items-center justify-between">
 
       <section>
-        {temp ? <Homepage data = {temp.about}  /> : <h1>Loading...</h1>}
+        {temp ? <Homepage data = {temp.about}  /> : <Loader />}
       </section>
       <section className='h-dvh'>
         hello
