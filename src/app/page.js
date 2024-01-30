@@ -2,8 +2,10 @@
 import Homepage from './page/Homepage';
 import { useEffect } from 'react';
 
-
 export default function Home() {
+
+  const dotenv = require('dotenv');
+  dotenv.config({path: './config.env'});
 
   useEffect(() => {
     const cursorDot = document.querySelector('[data-cursor-dot]');
@@ -29,8 +31,8 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex-col items-center justify-between">
-      <div className='cursor_dot' data-cursor-dot></div>
-      <div className='cursor_outline' data-cursor-outline></div>
+      <div className='cursor_dot' data-cursor-dot></div> {/* cursor */}
+      <div className='cursor_outline' data-cursor-outline></div> {/* cursor */}
       <section>
         <Homepage />
       </section>
