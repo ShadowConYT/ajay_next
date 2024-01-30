@@ -1,7 +1,10 @@
 {
     "about":{
+        "name":"Ajay",
         "about":"I'm a Developer and Analyst with a passion for learning and creating. I'm always looking for new opportunities to learn and grow as a developer and as a person.",
-        "aboutIMG":"https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg",
-        "title":"Software Engineer"
+        "aboutIMG":"gs://ajay-portfolio-db.appspot.com/AssetImg.webp",
+        "title":"Software Engineer",
+        "BGimg":"gs://ajay-portfolio-db.appspot.com/BG.jpg",
+        "resume":"gs://ajay-portfolio-db.appspot.com/Resume.pdf"
     }
 }

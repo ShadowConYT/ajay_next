@@ -1,29 +1,60 @@
-'use client';
+'use client'
+'use cors'
 import Homepage from './page/Homepage';
-import Cursor from './Cursor';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-async function getData(){
-  const DB_URI = "https://ajay-portfolio-db-default-rtdb.firebaseio.com/.json";
-  const response = await fetch(DB_URI);
-  const data = await response.json();
-  console.log(data);
-  return data;
-}
+const URL = process.env.dbKey;
+console.log(URL);
 
-export default async function Home() {
+export default function Home() {
 
-  const data = await getData();
+  useEffect(() => {
+    const cursorDot = document.querySelector('[data-cursor-dot]');
+    const cursorOutline = document.querySelector('[data-cursor-outline]');
+    const links = document.querySelectorAll('a');
+
+    const moveCursor = (e) => {
+      const { clientX, clientY } = e;
+      cursorDot.style.left = `${clientX}px`;
+      cursorDot.style.top = `${clientY}px`;
+      
+      cursorOutline.animate({
+        left: `${clientX}px`,
+        top: `${clientY}px`,
+      }, {duration: 4000, fill: 'forwards'})
+    };
+    document.addEventListener('mousemove', moveCursor);
+
+    return () => {
+      document.removeEventListener('mousemove', moveCursor);
+  };
+}, []);
+
+  const [temp, setTemp] = useState(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await fetch(URL)
+      result.json().then(json =>  setTemp(json))
+      .then(() => console.log())
+      return result;
+    }
+    fetchData();
+  }, [])
+
 
   return (
+    <>
+      <div className='cursor_dot' data-cursor-dot></div> {/* cursor */}
+      <div className='cursor_outline' data-cursor-outline></div> {/* cursor */}
     <main className="min-h-screen flex-col items-center justify-between">
-      <Cursor />
+
       <section>
-        {data ? <Homepage data = {data.about}  /> : <h1>Loading...</h1>}
+        {temp ? <Homepage data = {temp.about}  /> : <h1>Loading...</h1>}
       </section>
       <section className='h-dvh'>
         hello
       </section>
     </main>
+    </>
   )
 }

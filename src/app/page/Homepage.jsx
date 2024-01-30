@@ -4,10 +4,9 @@ import Navbar from '../components/Navbar';
 import Image from 'next/image';
 import AssetImg from '../assets/AssetImg.webp';
 import BG from '../assets/BG.jpg';
-import PropTypes from 'prop-types';
 
 import localFont from 'next/font/local';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import '../styles/homepage.css';
 
 
@@ -17,11 +16,10 @@ const myFont = localFont({
 
 const Homepage = ({ data }) => {
 
-  const { about, aboutIMG, title } = data;
+  const {name, about, aboutIMG, BGimg, resume } = data;
 
   const ResumeLink = () => {
-    const PDFpath = "../assets/Resume.pdf"
-    window.open("/Resume.pdf", "_blank");
+    window.open('/Resume.pdf', "_blank");
   }
 
   return (
@@ -34,17 +32,14 @@ const Homepage = ({ data }) => {
         <div className='flex md:flex-col md:justify-center'>
           <div>
             <div className='font-[montserrat] font-semibold flex text-white text-2xl text-center justify-center md:justify-normal  md:text-4xl lg:bottom-0 m-0 leading-none'>
-              <AnimatePresence>
-              <motion.span
-                className=''>Hi</motion.span>
+              <motion.span className=''>Hi</motion.span>
                 <span className='p-0 m-0 top-1'>
                   <picture>
                     <source srcSet="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.webp" type="image/webp" />
                     <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.gif" alt="👋" className='w-6 md:w-8 lg:w-9' />
                   </picture>
                 </span>, <span className='pl-2'>I am</span>
-                <span className={`lg:bottom-0 pl-1.5 md:pl-3 mb-5  text-[--secondary-color] font-extrabold uppercase`} >Ajay</span>
-              </AnimatePresence>
+                <span className={`lg:bottom-0 pl-1.5 md:pl-3 mb-5  text-[--secondary-color] font-extrabold uppercase`} >{name}</span>
             </div>
             
 

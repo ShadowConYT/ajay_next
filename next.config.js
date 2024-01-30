@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
+
+
 const nextConfig = {
-    reactStrictMode: true,
-    env: {
-        REACT_APP_DB_URI: process.env.REACT_APP_DB_URI,
-    },
+    env:{
+        dbKey:"https://ajay-portfolio-db-default-rtdb.firebaseio.com/.json"
+    }
 }
 
 module.exports = nextConfig
