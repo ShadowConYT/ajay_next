@@ -3,9 +3,12 @@
 import Homepage from './page/Homepage';
 import { useEffect, useState } from 'react';
 import Loader from './components/Loader';
+import dynamic from 'next/dynamic';
+
+const DynamicProjectComponent = dynamic(() => import('./page/Projects.jsx'), { ssr: false });
+
 
 const URL = process.env.dbKey;
-console.log(URL);
 
 export default function Home() {
 
@@ -53,7 +56,7 @@ export default function Home() {
         {temp ? <Homepage data = {temp.about}  /> : <Loader />}
       </section>
       <section className='h-dvh'>
-        hello
+        <Loader />
       </section>
     </main>
     </>
