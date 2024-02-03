@@ -4,6 +4,7 @@ import Homepage from './page/Homepage';
 import { useEffect, useState } from 'react';
 import Loader from './components/Loader';
 import dynamic from 'next/dynamic';
+import Projects from './page/Projects';
 
 const DynamicProjectComponent = dynamic(() => import('./page/Projects.jsx'), { ssr: false });
 
@@ -56,7 +57,7 @@ export default function Home() {
         {temp ? <Homepage data = {temp.about}  /> : <Loader />}
       </section>
       <section className='h-dvh'>
-        <Loader />
+        <Projects />
       </section>
     </main>
     </>
