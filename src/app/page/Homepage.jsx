@@ -7,6 +7,12 @@ import localFont from 'next/font/local';
 import { motion } from 'framer-motion';
 import '../styles/homepage.css';
 
+import { TiSocialInstagramCircular,
+          TiSocialLinkedinCircular,
+          TiSocialTwitterCircular,
+          TiSocialFacebookCircular } from "react-icons/ti";
+
+
 
 const myFont = localFont({
   src:'../assets/fonts/ClassyVogue.otf'
@@ -15,6 +21,29 @@ const myFont = localFont({
 const Homepage = ({ data }) => {
 
   const {name, about, aboutIMG, BGimg, resume } = data;
+
+  const socials = [
+    {
+      name: 'Instagram',
+      link: 'https://www.instagram.com/ajay.developer/',
+      icon: <TiSocialInstagramCircular className='text-3xl' />
+    },
+    {
+      name: 'LinkedIn',
+      link: 'https://www.linkedin.com/in/theajay06/',
+      icon: <TiSocialLinkedinCircular className='text-3xl' />
+    },
+    {
+      name: 'Twitter',
+      link: 'https://twitter.com/ajaysuresh',
+      icon: <TiSocialTwitterCircular className='text-3xl' />
+    },
+    {
+      name: 'Facebook',
+      link: 'https://www.facebook.com/',
+      icon: <TiSocialFacebookCircular className='text-3xl' />
+    }
+  ]
 
   const ResumeLink = () => {
     window.open('/Resume.pdf', "_blank");
@@ -76,20 +105,21 @@ const Homepage = ({ data }) => {
                   Resume
                 </button>
               </motion.div>
-              
-              
-
           </div>
         </div>
-        <div className='relative whole md:h-full flex justify-center md:block'>
-          <div
-            initial = {{opacity:0}}
-            animate = {{opacity:1}}
-            exit={{ x: "-100vh", opacity: 0 }}
+        <div className='socialContainer hidden lg:block'>
+              {socials.map((social, index) => {
+                return (
+                  <div key={index} className='socials hidden lg:block' ><a target='_blank' href={social.link}>{social.icon}</a></div>
+                )
+              })}
+            </div>
+        <div style={{pointerEvents:'none'}} className='relative whole md:h-full flex justify-center md:block'>
+          <motion.div
           className='circle md:h-screen lg:h-full transform md:translate-x-1/4 md:-translate-y-1/4 lg:transform-none lg:translate-x-0 lg:translate-y-0'>
             <Image src={BGimg} width={500} height={500} alt='profile-bg' className='bg lg:hidden' />
             <Image src={aboutIMG} width={500} height={500} alt='profile' className='absolute m-0 p-0 lg:blur-0 lg:bottom-0 scale-x-[-1] min-w-[170px] max-w-[23vw] md:max-w-none md:min-w-none  md:w-60 lg:w-full translate-x-[20%] md:translate-x-[15%] object-scale-down lg:max-h-full z-0' />
-          </div>
+        </motion.div>
         </div>
       </div>
     </div>

@@ -69,6 +69,14 @@
 		animation: animate infinite 5s ease-in-out;
 	 }
 
+	 .socialContainer{
+		display: none;
+	 }
+
+	 .socials{
+		display: none;
+	 }
+
  }
 
  @media only screen and (max-width: 767.5px){
@@ -188,3 +196,75 @@
 	  background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
 	}
   }
+
+
+  /* Write a Animate that floats and revolves at the same time */
+  @keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+*{
+	transition: all;
+}
+
+
+.socials{
+	position: absolute;
+	border-radius: 50%;
+	color: var(--secondary-color);
+	animation: float 5s ease-in-out infinite;
+}
+
+.socials:nth-child(1){
+	bottom: 15vh;
+	right: 20vw;
+}
+
+.socials:nth-child(2){
+	top: 15vh;
+	left: 20vw;
+}
+
+.socials:nth-child(3){
+	top: 15vh;
+	right: 20vw;
+}
+
+.socials:nth-child(4){
+	bottom: 15vh;
+	left: 20vw;
+}
+
+.socialContainer{
+	border-radius: 50%;
+	width: 20vw;
+	top: 40vh;
+	right: 5vw;
+	position: absolute;
+	animation: rotate 15s linear infinite;
+}
+
+.socialContainer:hover{
+	animation-play-state: paused;
+}
+
+/* Rotate */
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+

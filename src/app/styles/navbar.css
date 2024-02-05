@@ -9,7 +9,7 @@
 .head{
     padding: 0.5rem 0rem !important;
     display: flex;
-    justify-content:space-between;
+    justify-content:center;
     align-items: center;
 }
 
@@ -57,6 +57,10 @@ nav a{
         margin-left: 75vw;
     }
 
+    .active, .aTag:hover{
+        color: var(--primary-color);
+    }
+
     .head nav{
         position: fixed;
         top: 0;
@@ -72,6 +76,10 @@ nav a{
         transition: 1s;
         backdrop-filter: blur(5px);
         transform: translateY(-100vh);
+    }
+
+    .head nav a{
+        color: #000;
     }
 
     .head .responsive_nav{
