@@ -18,30 +18,30 @@ const myFont = localFont({
   src:'../assets/fonts/ClassyVogue.otf'
 })
 
-const Homepage = ({ data }) => {
+const Homepage = ({ dataC }) => {
 
-  const {name, about, aboutIMG, BGimg, resume } = data;
+  const {name, about, aboutIMG, BGimg, resume } = dataC;
 
   const socials = [
     {
       name: 'Instagram',
       link: 'https://www.instagram.com/ajay.developer/',
-      icon: <TiSocialInstagramCircular className='text-3xl' />
+      icon: <TiSocialInstagramCircular className='text-5xl' />
     },
     {
       name: 'LinkedIn',
       link: 'https://www.linkedin.com/in/theajay06/',
-      icon: <TiSocialLinkedinCircular className='text-3xl' />
+      icon: <TiSocialLinkedinCircular className='text-5xl' />
     },
     {
       name: 'Twitter',
       link: 'https://twitter.com/ajaysuresh',
-      icon: <TiSocialTwitterCircular className='text-3xl' />
+      icon: <TiSocialTwitterCircular className='text-5xl' />
     },
     {
       name: 'Facebook',
       link: 'https://www.facebook.com/',
-      icon: <TiSocialFacebookCircular className='text-3xl' />
+      icon: <TiSocialFacebookCircular className='text-5xl' />
     }
   ]
 
@@ -52,7 +52,7 @@ const Homepage = ({ data }) => {
   return (
     <>
     <div className='h-[100vh] relative bg-[#1c2430] overflow-hidden inset-0 flex flex-col md:justify-center lg:justify-normal items-center'>
-      <div className='z-20 mt-10 lg:mt-0'>
+      <div className='z-20 mt-10 lg:mt-0' >
           <Navbar />
       </div>
       <div className='z-10 mt-16 md:mt-0 md:mx-0 relative w-[75vw] md:w-[75vw] grid grid-cols-1 md:grid-cols-2 justify-center align-middle h-full '>

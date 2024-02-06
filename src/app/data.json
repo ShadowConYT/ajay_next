@@ -1,10 +1,15 @@
 {
-    "about":{
-        "name":"Ajay",
-        "about":"I'm a Developer and Analyst with a passion for learning and creating. I'm always looking for new opportunities to learn and grow as a developer and as a person.",
-        "aboutIMG":"gs://ajay-portfolio-db.appspot.com/AssetImg.webp",
-        "title":"Software Engineer",
-        "BGimg":"gs://ajay-portfolio-db.appspot.com/BG.jpg",
-        "resume":"gs://ajay-portfolio-db.appspot.com/Resume.pdf"
+    "about": {
+        "BGimg": "https://firebasestorage.googleapis.com/v0/b/ajay-portfolio-db.appspot.com/o/BG.jpg?alt=media&token=147f7c32-892d-4b59-83ca-ea987f0978af",
+        "about": "I'm a Developer and Analyst with a passion for learning and creating. I'm always looking for new opportunities to learn and grow as a developer and as a person.",
+        "aboutIMG": "https://firebasestorage.googleapis.com/v0/b/ajay-portfolio-db.appspot.com/o/AssetImg.webp?alt=media&token=189ab733-664f-4a0a-a4bb-14bc572b1265",
+        "name": "Ajay",
+        "resume": "https://firebasestorage.googleapis.com/v0/b/ajay-portfolio-db.appspot.com/o/Resume.pdf?alt=media&token=18c94b8f-4b58-4e49-a7e3-af60ec0ca45c",
+        "title": "Software Engineer"
+    },
+    "aboutPage": {
+        "FullName": "Ajay Suresh",
+        "content": "I am a Developer and Analyst based in Chennai, India. I'm an Artificial Intellligence and Data Science Undergraduate with expertise in Web Development and Data Analytics. I'm passionate about building and deploying AI models and creating web applications. I'm also a competitive programmer and have a good understanding of algorithms and data structures. I'm constantly pushing myself to learn new technologies and improve my skills.",
+        "role": "Developer and Analyst"
     }
 }

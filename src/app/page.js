@@ -3,11 +3,8 @@
 import Homepage from './page/Homepage';
 import { useEffect, useState } from 'react';
 import Loader from './components/Loader';
-import dynamic from 'next/dynamic';
 import Projects from './page/Projects';
-
-const DynamicProjectComponent = dynamic(() => import('./page/Projects.jsx'), { ssr: false });
-
+import { About } from './page/About';
 
 const URL = process.env.dbKey;
 
@@ -35,28 +32,52 @@ export default function Home() {
   };
 }, []);
 
-  const [temp, setTemp] = useState(null);
+  const [temp, setTemp] = useState();
+  
+  async function fetchData() {
+    const res = await fetch(URL);
+    const data = await res.json();
+    console.log(data);
+    setTemp(data);
+  }
+
   useEffect(() => {
-    const fetchData = async () => {
-      const result = await fetch(URL)
-      result.json().then(json =>  setTemp(json))
-      .then(() => console.log())
-      return result;
-    }
     fetchData();
-  }, [])
+  }, []);
+  
+  console.log(temp && temp.aboutPage);
 
-
+  const buttonToTop = () => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0);
+    }
+  }
+  
+  if (typeof window !== 'undefined') {
+    window.onscroll = function() {
+      if (window.scrollY > 0) {
+        document.querySelector('#butt').style.display = 'block';
+      } else {
+        document.querySelector('#butt').style.display = 'none';
+      }
+    }
+  }
+  
+  
   return (
     <>
       <div className='cursor_dot' data-cursor-dot></div> {/* cursor */}
       <div className='cursor_outline' data-cursor-outline></div> {/* cursor */}
     <main className="min-h-screen flex-col items-center justify-between">
-
+      <button id='butt' onClick={buttonToTop} className='fixed z-10 bottom-0 right-0 m-4 p-2 bg-gray-200 rounded-md'>To Top</button>
+      
       <section>
-        {temp ? <Homepage data = {temp.about}  /> : <Loader />}
+        {temp ? <Homepage dataC = {temp && temp.about}  /> : <Loader />}
       </section>
-      <section className='h-dvh'>
+      <section id='about'>
+        <About dataC = {temp} />
+      </section>
+      <section id='projects' className='h-dvh'>
         <Projects />
       </section>
     </main>

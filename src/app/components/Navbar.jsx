@@ -37,6 +37,10 @@ const Navbar = () => {
         }
     }, []);
 
+    const closeMenu = () => {
+        navRef.current.classList.remove('responsive_nav');
+    }
+
 
     const [isMobileView, setIsMobileView] = useState(false);
 
@@ -63,11 +67,11 @@ const Navbar = () => {
             <span className={`${AJ.className} text-xl text-yellow-200`} >AJ</span>
         </div>
         <nav id='nav' className='font-roz' ref={navRef}> 
-            <a className='aTag' href="#">About</a>
-            <a className='aTag' href="#">Skills</a>
-            <a className='aTag' href="#">Education</a>
-            <a className='aTag' href="#">Works</a>
-            <a className='aTag' href="#">Contact</a>
+            <a className='aTag' href="#about" onClick={closeMenu} >About</a>
+            <a className='aTag' href="#" onClick={closeMenu}>Skills</a>
+            <a className='aTag' href="#" onClick={closeMenu}>Education</a>
+            <a className='aTag' href="#projects" onClick={closeMenu}>Works</a>
+            <a className='aTag' href="#" onClick={closeMenu}>Contact</a>
             {isMobileView ? 
                 <button className='nav-btn nav-close-btn text-white' onClick={showBar}>
                     <FaTimes />
