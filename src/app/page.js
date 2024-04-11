@@ -77,9 +77,9 @@ export default function Home() {
       <section id='about'>
         <About dataC = {temp} />
       </section>
-      <section id='projects' className='h-dvh'>
+      {/* <section id='projects' className='h-dvh'>
         <Projects />
-      </section>
+      </section> */}
     </main>
     </>
   )
