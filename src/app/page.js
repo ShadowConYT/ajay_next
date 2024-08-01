@@ -70,7 +70,7 @@ export default function Home() {
       <div className='cursor_dot' data-cursor-dot></div> {/* cursor */}
       <div className='cursor_outline' data-cursor-outline></div> {/* cursor */}
     <main className="min-h-screen flex-col items-center justify-between">
-      <button id='butt' onClick={buttonToTop} className='fixed z-10 bottom-0 right-0 m-4 p-2 bg-gray-200 rounded-md'>To Top</button>
+      <button id='butt' onClick={buttonToTop} className='fixed hidden z-10 bottom-0 right-0 m-4 p-2 bg-gray-200 rounded-md'>To Top</button>
       
       <section>
         {temp ? <Homepage dataC = {temp && temp.about}  /> : <Loader />}
