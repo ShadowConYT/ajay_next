@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Loader from './components/Loader';
 import Projects from './page/Projects';
 import { About } from './page/About';
+import Works from './page/Works';
 
 const URL = process.env.dbKey;
 
@@ -80,6 +81,9 @@ export default function Home() {
       {/* <section id='projects' className='h-dvh'>
         <Projects />
       </section> */}
+      <section id='works' className='h-dvh'>
+        <Works />
+      </section>
     </main>
     </>
   )
