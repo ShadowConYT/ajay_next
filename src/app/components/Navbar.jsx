@@ -62,7 +62,7 @@ const Navbar = () => {
 
 
 return (
-    <div className='head md:w-[75vw] lg:mt-10'>
+    <div className='head !flex !justify-between relative md:w-[75vw] lg:mt-10'>
             <div className='xs:flex:md lg:opacity-100 md:w-auto'>
                 <span className={`flex text-xl text-yellow-300`}>
                     {`{ `}<span className={`text-white ${AJ.className}`}>&nbsp;AJ&nbsp;</span>{' }'}
@@ -75,14 +75,13 @@ return (
                     <a className='aTag' href="#projects" onClick={closeMenu}>Works</a>
                     <a className='aTag' href="#" onClick={closeMenu}>Contact</a>
                     {isMobileView ? 
-                            <button className='nav-btn nav-close-btn text-white' onClick={showBar}>
-                                    <FaTimes />
-                            </button> : null  
+                        <button className='nav-btn nav-close-btn text-white' onClick={showBar}>
+                                <FaTimes />
+                        </button> : null  
                     }
-                    
             </nav>
             {isMobileView ? 
-                    <button onClick={showBar} className="text-white nav-btn">
+                    <button onClick={showBar} className="text-white mr-2 md:!p-0 nav-btn">
                             <FaBars />
                     </button>
                     : null
