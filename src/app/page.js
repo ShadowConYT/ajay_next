@@ -3,9 +3,8 @@
 import Homepage from './page/Homepage';
 import { useEffect, useState } from 'react';
 import Loader from './components/Loader';
-import Projects from './page/Projects';
-import { About } from './page/About';
-import Works from './page/Works';
+import { BrowserRouter, Routes, Route } from 'react-router';
+import Navbar from './components/Navbar';
 
 const URL = process.env.dbKey;
 
@@ -38,7 +37,6 @@ export default function Home() {
   async function fetchData() {
     const res = await fetch(URL);
     const data = await res.json();
-    console.log(data);
     setTemp(data);
   }
 
@@ -62,28 +60,23 @@ export default function Home() {
         document.querySelector('#butt').style.display = 'none';
       }
     }
-  }
-  
+  }  
   
   return (
     <>
       <div className='cursor_dot' data-cursor-dot></div> {/* cursor */}
       <div className='cursor_outline' data-cursor-outline></div> {/* cursor */}
-    <main className="min-h-screen flex-col items-center justify-between">
-      <button id='butt' onClick={buttonToTop} className='fixed hidden z-10 bottom-0 right-0 m-4 p-2 bg-gray-200 rounded-md'>To Top</button>
       
-      <section>
-        {temp ? <Homepage dataC = {temp && temp.about}  /> : <Loader />}
-      </section>
-      <section id='about'>
-        <About dataC = {temp} />
-      </section>
-      {/* <section id='projects' className='h-dvh'>
-        <Projects />
-      </section> */}
-      <section id='works' className='h-dvh'>
-        <Works />
-      </section>
+    <main className="min-h-screen flex flex-col items-center justify-center">
+        <div className='z-20 mt-10 lg:mt-0' >
+            <Navbar />
+        </div>
+      <button id='butt' onClick={buttonToTop} className='fixed hidden z-10 bottom-0 right-0 m-4 p-2 bg-gray-200 rounded-md'>To Top</button>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={temp ? <Homepage dataC = {temp && temp.about}  /> : <Loader />}/>
+        </Routes>
+      </BrowserRouter>
     </main>
     </>
   )

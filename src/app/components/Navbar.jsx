@@ -61,32 +61,34 @@ const Navbar = () => {
         
 
 
-  return (
+return (
     <div className='head md:w-[75vw] md:mt-10' >
-        <div className='xs:block:md lg:hidden lg:opacity-100 md:w-20'>
-            <span className={`${AJ.className} text-xl text-yellow-200`} >AJ</span>
-        </div>
-        <nav id='nav' className='font-roz' ref={navRef}> 
-            <a className='aTag' href="#about" onClick={closeMenu} >About</a>
-            <a className='aTag' href="#" onClick={closeMenu}>Skills</a>
-            <a className='aTag' href="#" onClick={closeMenu}>Education</a>
-            <a className='aTag' href="#projects" onClick={closeMenu}>Works</a>
-            <a className='aTag' href="#" onClick={closeMenu}>Contact</a>
+            <div className='xs:block:md lg:opacity-100 md:w-auto'>
+                <span className={`w-40 text-xl text-yellow-300`}>
+                    {'{ '}<span className={`text-white ${AJ.className}`}>AJ</span>{' }'}
+                </span> 
+            </div>
+            <nav id='nav' className='font-roz' ref={navRef}> 
+                    <a className='aTag' href="#" onClick={closeMenu}>Home</a>
+                    {/* <a className='aTag' href="#about" onClick={closeMenu} >About</a> */}
+                    {/* <a className='aTag' href="#" onClick={closeMenu}>Education</a> */}
+                    <a className='aTag' href="#projects" onClick={closeMenu}>Works</a>
+                    <a className='aTag' href="#" onClick={closeMenu}>Contact</a>
+                    {isMobileView ? 
+                            <button className='nav-btn nav-close-btn text-white' onClick={showBar}>
+                                    <FaTimes />
+                            </button> : null  
+                    }
+                    
+            </nav>
             {isMobileView ? 
-                <button className='nav-btn nav-close-btn text-white' onClick={showBar}>
-                    <FaTimes />
-                </button> : null  
+                    <button onClick={showBar} className="text-white nav-btn">
+                            <FaBars />
+                    </button>
+                    : null
             }
-            
-        </nav>
-        {isMobileView ? 
-            <button onClick={showBar} className="text-white nav-btn">
-                <FaBars />
-            </button>
-            : null
-        }
     </div>
-  )
+)
 }
 
 export default Navbar

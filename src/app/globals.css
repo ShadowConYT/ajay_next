@@ -12,9 +12,14 @@ html{
   width: 10px;
 }
 
+:root{
+  --sub-text-color: #8f9094;
+}
+
 
 body{
   cursor: none;
+  background-color: #1c2430;
 }
 
 *{
