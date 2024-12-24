@@ -61,7 +61,6 @@ const Navbar = () => {
         
 
 
-<<<<<<< HEAD
 return (
     <div className='head md:w-[75vw] md:mt-10' >
             <div className='xs:block:md lg:opacity-100 md:w-auto'>
@@ -82,19 +81,6 @@ return (
                     }
                     
             </nav>
-=======
-  return (
-    <div className='head w-[75vw] mt-10' >
-        <div className='lg:opacity-100 md:w-20'>
-            <span className={`${AJ.className} text-xl text-yellow-200`} >AJ</span>
-        </div>
-        <nav id='nav' className='font-roz' ref={navRef}> 
-            <a className='aTag' href="#">About</a>
-            <a className='aTag' href="#">Skills</a>
-            <a className='aTag' href="#">Education</a>
-            <a className='aTag' href="#">Works</a>
-            <a className='aTag' href="#">Contact</a>
->>>>>>> 80057d380ed3cdad15e146af8864bb18f033c039
             {isMobileView ? 
                     <button onClick={showBar} className="text-white nav-btn">
                             <FaBars />
