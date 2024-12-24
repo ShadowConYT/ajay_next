@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+// import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import { MdArrowOutward } from "react-icons/md";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
@@ -32,9 +32,9 @@ const Works = () => {
                                 }
                             </p>
                         </div>
-                        <Link to={link} className='text-white'>
+                        <a href={link} className='text-white'>
                             <MdArrowOutward />
-                        </Link>
+                        </a>
                     </div>
                     <p>{desc}</p>
                 </div>
@@ -50,7 +50,7 @@ const Works = () => {
                         <div className='text-left lg:mb-10'>
                             <h1 className='text-white font-extrabold text-4xl'>Projects Undertaken</h1>
                             <p className='text-[--sub-text-color]'>Here&apos;s Some of my project I worked on.</p>
-                            <Link to='/projects' className='text-yellow-400 flex items-center'>Explore More <MdOutlineKeyboardDoubleArrowRight /></Link>
+                            <a href='/projects' className='text-yellow-400 flex items-center'>Explore More <MdOutlineKeyboardDoubleArrowRight /></a>
                         </div>
                         {
                             mockWorks.map((work, index) => {
