@@ -104,7 +104,7 @@ export default function Home() {
           </BrowserRouter>
         )} */}
         {
-          temp ? <Homepage dataC={temp.about} /> : <Loader />
+          temp ? <Homepage dataC={temp.about} homePageProjects={temp.homePageProjects} /> : <Loader />
         }
       </main>
     </>

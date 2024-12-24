@@ -16,7 +16,7 @@ const myFont = localFont({
 src:'../assets/fonts/ClassyVogue.otf'
 })
 
-const Homepage = ({ dataC }) => {
+const Homepage = ({ dataC, homePageProjects }) => {
 const {name, about, aboutIMG, BGimg, resume } = dataC;
 
 const socials = [
@@ -117,7 +117,7 @@ return (
       </div>
     </section>
     <section>
-      <Works />
+      <Works projects={homePageProjects} />
     </section>
   </>
 )
