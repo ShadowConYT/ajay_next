@@ -53,10 +53,10 @@ const Homepage = ({ dataC }) => {
     <>
     <section>
       <div className='h-[90vh] relative bg-[#1c2430] overflow-hidden inset-0 flex flex-col md:justify-center lg:justify-normal items-center'>
-        <div className='z-10 mt-16 md:mt-0 md:mx-0 relative w-[75vw] md:w-[75vw] grid grid-cols-1 md:grid-cols-2 justify-center align-middle h-full '>
+        <div className='z-10 mt-16 md:mt-0 md:mx-0 relative w-[90vw] md:w-[75vw] grid grid-cols-1 items-center lg:grid-cols-2 justify-center align-middle h-full '>
           <div className='flex md:flex-col md:justify-center'>
             <div>
-              <div className='font-[montserrat] font-semibold flex text-white text-2xl text-center justify-center md:justify-normal  md:text-4xl lg:bottom-0 m-0 leading-none'>
+              <div className='font-[montserrat] font-semibold flex text-white text-2xl text-center justify-start md:justify-normal  md:text-4xl lg:bottom-0 m-0 leading-none'>
                 <motion.span
                   initial = {{opacity:0, y: 50, duration: 5}}
                   animate = {{opacity:1, y:0, duration: 5}}

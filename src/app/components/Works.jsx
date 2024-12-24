@@ -49,7 +49,7 @@ const Works = () => {
                     <div className='flex flex-col'>
                         <div className='text-left lg:mb-10'>
                             <h1 className='text-white font-extrabold text-4xl'>Projects Undertaken</h1>
-                            <p className='text-[--sub-text-color]'>Here's Some of my project I worked on.</p>
+                            <p className='text-[--sub-text-color]'>Here&apos;s Some of my project I worked on.</p>
                             <Link to='/projects' className='text-yellow-400 flex items-center'>Explore More <MdOutlineKeyboardDoubleArrowRight /></Link>
                         </div>
                         {

@@ -62,10 +62,10 @@ const Navbar = () => {
 
 
 return (
-    <div className='head md:w-[75vw] md:mt-10' >
-            <div className='xs:block:md lg:opacity-100 md:w-auto'>
-                <span className={`w-40 text-xl text-yellow-300`}>
-                    {'{ '}<span className={`text-white ${AJ.className}`}>AJ</span>{' }'}
+    <div className='head md:w-[75vw] lg:mt-10'>
+            <div className='xs:flex:md lg:opacity-100 md:w-auto'>
+                <span className={`flex text-xl text-yellow-300`}>
+                    {`{ `}<span className={`text-white ${AJ.className}`}>&nbsp;AJ&nbsp;</span>{' }'}
                 </span> 
             </div>
             <nav id='nav' className='font-roz' ref={navRef}> 
