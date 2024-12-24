@@ -38,7 +38,6 @@
 	transform: scale(1.04) rotate(1deg);
   }
   
-<<<<<<< HEAD
 
 
  @media only screen and (max-width: 1024px){
@@ -91,31 +90,6 @@
  @keyframes animate {
 	0% {
 		transform: translateY(0);
-=======
-  .circle {
-	width: 100px;
-	height: 100px;
-	background: repeating-linear-gradient(48deg, #6e62da 0%, #cb559c 100%);
-	border-radius: 35% 30% 75% 30% / 49% 30% 70% 51%;
-	position: absolute;
-	animation: move-up6 2s ease-in infinite alternate-reverse;
-  }
-  
-  .circle:nth-child(1) {
-	top: -25px;
-	left: -25px;
-  }
-  
-  .circle:nth-child(2) {
-	bottom: -25px;
-	right: -25px;
-	animation-name: move-down1;
-  }
-  
-  @keyframes move-up6 {
-	to {
-	  transform: translateY(-10px);
->>>>>>> 80057d380ed3cdad15e146af8864bb18f033c039
 	}
   }
   
@@ -123,7 +97,6 @@
 	to {
 	  transform: translateY(10px);
 	}
-<<<<<<< HEAD
 	100% {
 		transform: translateY(0);
 	}
@@ -297,7 +270,3 @@
 	}
 }
 
-=======
-  }
-  
->>>>>>> 80057d380ed3cdad15e146af8864bb18f033c039
