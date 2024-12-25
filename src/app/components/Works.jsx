@@ -1,8 +1,11 @@
 import React from 'react';
-// import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import { MdArrowOutward } from "react-icons/md";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+
+import Billder from '../assets/Projects/Billder.png';
+import Igris from '../assets/Projects/Igris.png';
+import Pkm from '../assets/Projects/Pkm.png';
 
 const Works = ({projects}) => {
 
@@ -14,18 +17,17 @@ const Works = ({projects}) => {
         // {title: "Portfolio", desc: "A portfolio website that showcases my works and projects", img: image, techStack: ["Python", "Luck"], link: 'https://youtu.be/1Q2e1J8X1ZQ'},
     ]
 
-    console.log(projects && projects);
     mockWorks.push(...projects);
 
     const WorksCard = ({title, description, image, tags, link}) => {
         return (
-            <div className='md:w-[35vw] lg:w-[35vw] border-[#2f3c50] border-[1px] bg-[#00000] flex flex-col rounded-2xl items-center justify-center'>
-                <div>
+            <motion.dev className='md:w-[35vw] lg:w-[35vw] border-[#2f3c50] border-[1px] bg-[#00000] flex flex-col rounded-2xl items-center justify-center'>
+                <motion.dev>
                     <img src={image} alt={title} className='rounded-t-2xl' />
-                </div>
-                <div className='p-2 text-white mx-3'>
-                    <div className='border-b-[1px] border-[#2f3c50] mb-1 p-2 flex justify-between'>
-                        <div className='flex flex-col flex-wrap'>
+                </motion.dev>
+                <motion.dev className='p-2 text-white mx-3'>
+                    <motion.dev className='border-b-[1px] border-[#2f3c50] mb-1 p-2 flex justify-between'>
+                        <motion.dev className='flex flex-col flex-wrap'>
                             <h2 className='font-bold'>{title}</h2>
                             <p className='flex flex-wrap gap-1'>
                                 {
@@ -34,55 +36,55 @@ const Works = ({projects}) => {
                                     })
                                 }
                             </p>
-                        </div>
+                        </motion.dev>
                         <a href={link} className='text-white'>
                             <MdArrowOutward />
                         </a>
-                    </div>
+                    </motion.dev>
                     <p>{description}</p>
-                </div>
-            </div>
+                </motion.dev>
+            </motion.dev>
         )
     }
 
     return (
-        <div className='min-h-dvh w-[75vw] my-20'>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-                <div>
-                    <div className='flex flex-col'>
-                        <div className='text-left lg:mb-10'>
+        <motion.dev className='min-h-dvh w-[75vw] my-20'>
+            <motion.dev className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                <motion.dev>
+                    <motion.dev className='flex flex-col'>
+                        <motion.dev className='text-left lg:mb-10'>
                             <h1 className='text-white font-extrabold text-4xl'>Projects Undertaken</h1>
                             <p className='text-[--sub-text-color]'>Here&apos;s Some of my project I worked on.</p>
                             <a href='/projects' className='text-yellow-400 flex items-center'>Explore More <MdOutlineKeyboardDoubleArrowRight /></a>
-                        </div>
+                        </motion.dev>
                         {
                             mockWorks.map((work, index) => {
                                 return (
-                                    <div key={index} 
+                                    <motion.dev key={index} 
                                         className={`flex ${index % 2 == 0 ? 'hidden' : 'block'} my-10`}
                                     >
                                         <WorksCard {...work} />
-                                    </div>
+                                    </motion.dev>
                                 )
                             })
                         }
-                    </div>
-                </div>
-                <div>
+                    </motion.dev>
+                </motion.dev>
+                <motion.dev>
                     {
                         mockWorks.map((work, index) => {
                             return (
-                                <div key={index} 
+                                <motion.dev key={index} 
                                     className={`flex ${index % 2 == 1 ? 'hidden' : 'block'} ${index == 0 ? 'mb-10' : 'my-10'}`}
                                 >
                                     <WorksCard {...work} />
-                                </div>
+                                </motion.dev>
                             )
                         })
                     }
-                </div>
-            </div>
-        </div>
+                </motion.dev>
+            </motion.dev>
+        </motion.dev>
     )
 }
 
