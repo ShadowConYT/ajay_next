@@ -5,7 +5,8 @@ import Homepage from './page/Homepage';
 import { useEffect, useState } from 'react';
 import Loader from './components/Loader';
 import Navbar from './components/Navbar';
-import { BrowserRouter, Routes, Route } from 'react-router';
+import { IoIosArrowUp } from "react-icons/io";
+import { motion } from 'framer-motion';
 
 const URL = process.env.dbKey;
 
@@ -85,13 +86,17 @@ export default function Home() {
         <div className="z-20 mt-10 lg:mt-0">
           <Navbar />
         </div>
-        <button
+        <motion.button
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: 100 }}
+          transition={{ duration: 0.5, type: 'tween' }}
           id="butt"
           onClick={buttonToTop}
           className="fixed hidden z-10 bottom-0 right-0 m-4 p-2 bg-gray-200 rounded-md"
         >
-          To Top
-        </button>
+          <IoIosArrowUp />
+        </motion.button>
         {/* Only render Router on client-side */}
         {/* {typeof window !== 'undefined' && (
           <BrowserRouter>

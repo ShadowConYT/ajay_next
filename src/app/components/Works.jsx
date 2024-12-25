@@ -3,10 +3,6 @@ import { motion } from 'framer-motion';
 import { MdArrowOutward } from "react-icons/md";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
-import Billder from '../assets/Projects/Billder.png';
-import Igris from '../assets/Projects/Igris.png';
-import Pkm from '../assets/Projects/Pkm.png';
-
 const Works = ({projects}) => {
 
     const image = 'https://placehold.co/1920x750';
@@ -19,9 +15,14 @@ const Works = ({projects}) => {
 
     mockWorks.push(...projects);
 
-    const WorksCard = ({title, description, image, tags, link}) => {
+    const WorksCard = ({title, description, image, tags, link, delay}) => {
         return (
-            <motion.dev className='md:w-[35vw] lg:w-[35vw] border-[#2f3c50] border-[1px] bg-[#00000] flex flex-col rounded-2xl items-center justify-center'>
+            <motion.dev 
+                initial={{opacity: 0, x: 100}}
+                animate={{opacity: 1, x: 0}}
+                transition={{duration: 0.5, delay:delay, type: 'spring'}}
+                exit={{opacity: 0, x: 100}}
+                className='md:w-[35vw] lg:w-[35vw] border-[#2f3c50] border-[1px] bg-[#00000] flex flex-col rounded-2xl items-center justify-center'>
                 <motion.dev>
                     <img src={image} alt={title} className='rounded-t-2xl' />
                 </motion.dev>
@@ -60,10 +61,10 @@ const Works = ({projects}) => {
                         {
                             mockWorks.map((work, index) => {
                                 return (
-                                    <motion.dev key={index} 
+                                    <motion.dev key={index}
                                         className={`flex ${index % 2 == 0 ? 'hidden' : 'block'} my-10`}
                                     >
-                                        <WorksCard {...work} />
+                                        <WorksCard {...work} delay={index - 0.5} />
                                     </motion.dev>
                                 )
                             })
@@ -77,7 +78,7 @@ const Works = ({projects}) => {
                                 <motion.dev key={index} 
                                     className={`flex ${index % 2 == 1 ? 'hidden' : 'block'} ${index == 0 ? 'mb-10' : 'my-10'}`}
                                 >
-                                    <WorksCard {...work} />
+                                    <WorksCard {...work} delay={index - 0.5} />
                                 </motion.dev>
                             )
                         })
